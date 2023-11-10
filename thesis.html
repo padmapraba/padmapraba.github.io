@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Gapminder Visualization</title>
+		<title>Honors Thesis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -45,15 +45,33 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Gapminder Global Developments Visualization</h1>
+							<h1>Project Summary: Predictive Modeling for Wildfire Mitigation</h1>
 							
 							<!-- <a href="Gapminder-Viz/index.html" class="viz"> -->
-								<span class="image main"><img src="images/gapminder.png" alt="" /></span>
+								<span class="image main"><img src="images/forest_fire.jpg" alt="" /></span>
 							<!-- </a> -->
                             
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p><b></b></p>
+							<p>
+								Climate change has significantly magnified the severity and frequency of wildfires, necessitating proactive measures to manage these escalating natural disasters. With extreme fires on the rise globally, accurately predicting fire size is pivotal in facilitating informed decisions for mitigating risks to both the environment and human populations. This study employs machine learning techniques, focusing on attributes like time, weather, and fire location to estimate the burned area of a fire.
+								</p>
+								<span class="image main">
+									<img src="images/attributes_fire.png" alt="" />
+								</span>
+								
+							<p>
+								In this study, the approach is bifurcated into two distinct parts. The initial phase employs regression techniques to estimate the burned area of fires in the United States, following a methodology akin to Cortez and Morais. The selection of optimal predictors based on evaluation metrics like RSME and MAE drives the subsequent use of these predictors in various classification models to determine fire size classes. These classes are critical in aiding resource allocation for fire mitigation based on their boundaries. Using spatial, temporal, and weather data in five experimental configurations, six machine learning models, including Multiple Regression, Support Vector Machines, Decision Trees, Random Forests, and Neural Networks, are implemented and assessed based on default settings akin to the Cortez and Morais approach. The latter phase shifts to classification models such as Support Vector Machines, K Nearest Neighbors, Decision Trees, Random Forests, Multinomial Logistic Regression, and XGBoost. Utilizing metrics like precision, recall, and accuracy, these models are evaluated, considering the importance of balanced datasets to ensure equal class prioritization. Grid search techniques are employed to optimize hyperparameters, such as k values in KNN and kernel choices in Support Vector Machines, ensuring the best model selection based on F1-score and ROC-AUC performance. The final model is comprehensively interpreted through feature importance assessment, particularly using permutation feature importance, shedding light on influential features in predicting fire size classes.
+								</p>
+
+								<span class="image main">
+									<img src="images/dist_firesize.png" alt="" />
+								</span>
+
+							<p>The implications of accurately predicting wildfire sizes are profound, allowing for proactive measures in resource allocation and timely warnings to at-risk residents for evacuation. The most effective model from Part I, utilizing Support Vector Machines with spatial, temporal, and weather features, showcased promising predictive capabilities. However, discrepancies in accuracy were noted compared to the Cortez and Morais experiment, likely due to the broader dataset used in this study encompassing fires across the United States. Focusing on specific regional data, like the Pacific Northwest, might enhance model accuracy. In Part II, the Random Forest and XGBoost models emerged as the top performers, showcasing comparable accuracies and ROC-AUC scores. Crucial features for predicting fire classes included cluster, month, and Relative Humidity. Eliminating less crucial features, as indicated by Permutation Feature Importance metrics, could refine the classification models. Additionally, obtaining precise vegetation data for fire regions, given the significance of the cluster feature, could further improve predictive outcomes.</p>
+							<span class="image main"><img src="images/feature_importance_xgboost.png" alt="" /></span>
+							
+							<p>For the code and details of the forest fire size prediction project, please visit the <a href="https://github.com/padmapraba/forest-fire-size-prediction">GitHub repository</a>.</p>
+
 						</div>
 					</div>
 
@@ -80,17 +98,7 @@
 								</form>
 							</section> -->
 							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
+								
 							</section>
 							<ul class="copyright">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
