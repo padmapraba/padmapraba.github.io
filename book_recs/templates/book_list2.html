@@ -1,0 +1,71 @@
+<!-- templates/book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+    <style>
+        .book-card {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <!-- Flexbox container to align button and title -->
+            <div class="is-flex is-align-items-center is-justify-content-space-between mb-4">
+                <div class="control">
+                    <h1 class="title">Book List</h1>
+
+                    <button type="submit" class="button is-primary">Get Recommendations</button>
+                </div>
+            </div>
+            <!-- <h1 class="title">Book List</h1> -->
+            
+            <div class="columns is-multiline">
+                {% for book in books %}
+                <div class="column is-one-quarter">
+                    <div class="card book-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ book.image_url }}" alt="Book Cover">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">{{ book.book_title }}</p>
+                            <p class="subtitle is-6">by {{ book.book_authors }}</p>
+                            <div class="content">
+                                <p>{{ book.genres }}</p>
+                                <p>Rating: {{ book.book_rating }}            
+                                <!-- Add other book details as needed -->
+                                <label class="radio">
+                                    <input type="radio" name="book_id" value="{{ book.id }}" required>
+                                </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Pagination Links -->
+            <nav class="pagination" role="navigation" aria-label="pagination">
+                <ul class="pagination-list">
+                    <!-- Previous page link -->
+                    {% if page > 1 %}
+                    <li><a class="pagination-link" href="{{ url_for('book_list', page=page-1) }}">Previous</a></li>
+                    {% endif %}
+
+                    <!-- Next page link -->
+                    <li><a class="pagination-link" href="{{ url_for('book_list', page=page+1) }}">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</body>
+</html>
