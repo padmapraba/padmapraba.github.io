@@ -1,0 +1,23 @@
+@media screen and (min-width: 737px) {
+    #main > .inner {
+        padding: 0 13em 0.1em 13em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #main > .inner {
+        padding: 0 5em 0.1em 5em;
+    }
+}
+
+#main .inner .image.main {
+    max-width: 80%;
+    margin: 0 auto;
+    /* object-fit: cover; */
+}
+
+#main .inner .image.main img {
+    width: 100%;
+    height: auto;
+
+}
