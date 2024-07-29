@@ -181,8 +181,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			h1 {
-				font-size: 2em;
-				margin: 0 0 1em 0;
+				font-size: 5em;
+				margin: 0 5em 1em 5em;
 			}
 
 		}
