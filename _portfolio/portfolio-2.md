@@ -31,3 +31,4 @@ After training, the model was tested on new images to classify them as either ch
 ### Conclusion
 This project demonstrated the effectiveness of transfer learning and data augmentation in image classification tasks. By leveraging pre-trained models and augmenting data, high accuracy can be achieved even with limited datasets. This approach is not only efficient but also adaptable to various applications in computer vision. Transfer learning significantly reduces the computational resources and time required for training, making it a powerful tool in the field of machine learning and deep learning.
 
+For the code and details of the bakery classification project, please visit the [GitHub repository](https://github.com/padmapraba/donut-or-cake).
