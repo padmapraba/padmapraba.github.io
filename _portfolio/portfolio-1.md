@@ -1,6 +1,6 @@
 ---
 title: "Forest Fire Size Prediction"
-# excerpt: "<br/><img src='/images/thesis/fire.jpeg' />"
+excerpt: #"<br/><img src='/images/thesis/fire.jpeg' />"
 collection: portfolio
 ---
 
