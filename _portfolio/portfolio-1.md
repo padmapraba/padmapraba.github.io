@@ -1,10 +1,9 @@
 ---
 title: "Forest Fire Size Prediction"
-excerpt: #"<br/><img src='/images/thesis/fire.jpeg' />"
+excerpt: "Predictive Modeling for Wildfire Mitigation<br/><img src='/images/thesis/fire.jpeg' />"
 collection: portfolio
 ---
 
-# Project Summary: Predictive Modeling for Wildfire Mitigation
 
 ![Forest Fire](/images/thesis/forest_fire.jpg)
 
