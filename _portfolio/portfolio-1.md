@@ -1,6 +1,6 @@
 ---
 title: "Forest Fire Size Prediction"
-excerpt: "Predictive Modeling for Wildfire Mitigation<br/><img src='/images/thesis/fire.jpeg' />"
+excerpt: "Predictive Modeling for Wildfire Mitigation<br/>"
 collection: portfolio
 ---
 
