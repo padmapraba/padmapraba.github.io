@@ -4,7 +4,6 @@ excerpt: "Detecting anomalies using LSTMs<br/>"
 collection: portfolio
 ---
 
-# Anomaly Detection in Financial Data with Explainable AI
 
 ![Alt text](/images/fin-anomaly-detect/reconstruction.png)
 
