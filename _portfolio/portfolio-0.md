@@ -5,7 +5,7 @@ collection: portfolio
 ---
 
 
-# Building a Book Recommendation System with FAISS and Sentence Embeddings
+## Building a Book Recommendation System with FAISS and Sentence Embeddings
 
 In this project, we developed a book recommendation system by leveraging the power of embeddings and FAISS (Facebook AI Similarity Search). The goal was to identify and recommend books similar to a given query or a specific book title. Below, I walk through the key steps and concepts involved in creating this system.
 
