@@ -4,6 +4,7 @@ excerpt: "Optimizing energy management with deep reinforcement learning in micro
 collection: portfolio
 ---
 
+![alt text](/images/city-learn/before_shaping.png)
 
 ## Introduction/Problem
 
@@ -55,6 +56,9 @@ All these values are normalized with respect to no control outcomes, so any valu
 In the initial run of all the algorithms, the reward history showed that SAC and A2C converged, while PPO continued to oscillate. However, an examination of the KPIs revealed that none of the control algorithms performed better than having no control in the environment, as all KPI values were around 1. Notably, Building 2 achieved slightly better building-level KPIs under control. To understand this, I analyzed the agents' actions: SAC and A2C were discharging the batteries consistently at each timestep for both buildings, while PPO charged and discharged the batteries randomly, leading to less stable results. The SARSA agent, in the discretized environment, also did not perform better than having no control, with KPI values close to 1 as well.
 
 Given these results, it is clear that further tuning and exploration are needed to achieve significant improvements over the baseline. The algorithms may require more sophisticated tuning of hyperparameters, such as learning rates, exploration strategies, and network architectures, to better adapt to the complexity of the environment.
+
+![alt text](/images/city-learn/after%20spahing.png)
+![alt text](/images/city-learn/alg_after.png)
 
 ## Conclusion
 
