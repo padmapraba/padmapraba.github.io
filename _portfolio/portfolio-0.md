@@ -5,18 +5,36 @@ collection: portfolio
 ---
 
 
-![Forest Fire](/images/thesis/forest_fire.jpg)
+# Building a Book Recommendation System with FAISS and Sentence Embeddings
 
-Climate change has significantly magnified the severity and frequency of wildfires, necessitating proactive measures to manage these escalating natural disasters. With extreme fires on the rise globally, accurately predicting fire size is pivotal in facilitating informed decisions for mitigating risks to both the environment and human populations. This study employs machine learning techniques, focusing on attributes like time, weather, and fire location to estimate the burned area of a fire.
+In this project, we developed a book recommendation system by leveraging the power of embeddings and FAISS (Facebook AI Similarity Search). The goal was to identify and recommend books similar to a given query or a specific book title. Below, I walk through the key steps and concepts involved in creating this system.
 
-![Attributes of Fire](/images/thesis/attributes_fire.png)
+## Web Scraping Goodreads Data
 
-In this study, the approach is bifurcated into two distinct parts. The initial phase employs regression techniques to estimate the burned area of fires in the United States, following a methodology similar to Cortez and Morais. The selection of optimal predictors based on evaluation metrics like RMSE and MAE drives the subsequent use of these predictors in various classification models to determine fire size classes. These classes are critical in aiding resource allocation for fire mitigation based on their boundaries. Using spatial, temporal, and weather data in five experimental configurations, six machine learning models, including Multiple Regression, Support Vector Machines, Decision Trees, Random Forests, and Neural Networks, are implemented and assessed based on default settings similar to the Cortez and Morais approach. The latter phase shifts to classification models such as Support Vector Machines, K Nearest Neighbors, Decision Trees, Random Forests, Multinomial Logistic Regression, and XGBoost. Utilizing metrics like precision, recall, and accuracy, these models are evaluated, considering the importance of balanced datasets to ensure equal class prioritization. Grid search techniques are employed to optimize hyperparameters, such as k values in KNN and kernel choices in Support Vector Machines, ensuring the best model selection based on F1-score and ROC-AUC performance. The final model is comprehensively interpreted through feature importance assessment, particularly using permutation feature importance, shedding light on influential features in predicting fire size classes.
+To start, we used Python's `requests` library and `BeautifulSoup` to scrape book data from Goodreads. We extracted various attributes such as book titles and URLs for further processing. After scraping, the data was cleaned and organized into a structured format using `pandas`. This structured data formed the basis for our recommendation system.
 
-![Distribution of Fire Size](/images/thesis/dist_firesize.png)
+## Embedding Book Descriptions
 
-The implications of accurately predicting wildfire sizes are profound, allowing for proactive measures in resource allocation and timely warnings to at-risk residents for evacuation. The most effective model from Part I, utilizing Support Vector Machines with spatial, temporal, and weather features, showcased promising predictive capabilities. However, discrepancies in accuracy were noted compared to the Cortez and Morais experiment, likely due to the broader dataset used in this study encompassing fires across the United States. Focusing on specific regional data, like the Pacific Northwest, might enhance model accuracy. In Part II, the Random Forest and XGBoost models emerged as the top performers, showcasing comparable accuracies and ROC-AUC scores. Crucial features for predicting fire classes included cluster, month, and Relative Humidity. Eliminating less crucial features, as indicated by Permutation Feature Importance metrics, could refine the classification models. Additionally, obtaining precise vegetation data for fire regions, given the significance of the cluster feature, could further improve predictive outcomes.
+Next, we needed to convert book descriptions into numerical vectors, known as embeddings, that could be used for similarity comparison. For this, we used the `SentenceTransformer` library, specifically the `all-MiniLM-L6-v2` model, which generates high-quality sentence embeddings.
 
-![Feature Importance in XGBoost](/images/thesis/feature_importance_xgboost.png)
+Embeddings are a way of representing text data in a continuous vector space, where similar texts have similar vector representations. By embedding book descriptions, we could capture semantic similarities between books based on their content.
 
-For the code and details of the forest fire size prediction project, please visit the [GitHub repository](https://github.com/padmapraba/forest-fire-size-prediction).
+## Using FAISS for Efficient Similarity Search
+
+With embeddings ready, the next step was to perform similarity searches. This is where FAISS comes into play. FAISS is a library developed by Facebook AI that enables fast and efficient similarity search, even on large datasets.
+
+We used FAISS to create an index of the book embeddings. This index allows us to quickly find books that are most similar to a given query or another book's description.
+
+### How FAISS Works
+
+FAISS operates by creating an index structure that allows efficient querying. The primary method used here is L2 distance (Euclidean distance), which measures how far apart two vectors (in our case, book embeddings) are. When a query is made, FAISS returns the closest vectors in the index, which correspond to the most similar books.
+
+## Querying Similar Books
+
+To find similar books, we first convert the query (e.g., a book description or a short phrase) into an embedding using the same SentenceTransformer model. We then search this query embedding against our FAISS index to retrieve a list of books that are most similar.
+
+For instance, if you input a query like "pirates and sailors fight," the system generates an embedding for this phrase and searches the FAISS index for books with descriptions that are closest in vector space to the query embedding. The result is a list of books that match the theme or content of the query.
+
+## Conclusion
+
+This project demonstrates how to build a recommendation system using modern NLP techniques and tools. By combining sentence embeddings with FAISS, we created a scalable and efficient system capable of providing high-quality book recommendations. Whether for personal use or integration into a larger platform, this approach can be adapted to various domains beyond books, making it a versatile solution for content-based recommendation systems.
