@@ -38,3 +38,6 @@ For instance, if you input a query like "pirates and sailors fight," the system 
 ## Conclusion
 
 This project demonstrates how to build a recommendation system using modern NLP techniques and tools. By combining sentence embeddings with FAISS, I created a scalable and efficient system capable of providing high-quality book recommendations. Whether for personal use or integration into a larger platform, this approach can be adapted to various domains beyond books, making it a versatile solution for content-based recommendation systems.
+
+
+[Link to the video](https://youtu.be/tBZMrb-EfDM)
