@@ -7,7 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Hey there! I'm currently on a thrilling journey pursuing my master's in computer science with a specialized focus on AI/ML at Brown University. Delving into the world of data to unravel insights and tackle challenges is where I thrive. I'm passionate about using data as a storytelling tool and a solution-building powerhouse. Apologies for any inconvenience, but my portfolio is under construction
+Hey there! I’m excited to share a bit about my journey as I pursue my master’s in Computer Science with a specialized focus on AI and Machine Learning at Brown University. My passion for solving complex problems through innovative technology fuels everything I do. Whether I’m diving into raw datasets to uncover hidden patterns or developing machine learning models to drive impactful solutions, I find endless excitement in the intersection of data and decision-making.
+
+I believe in the power of data to tell compelling stories, transform ideas into actionable insights, and shape the future of industries. For me, every challenge is an opportunity to push the boundaries of what’s possible through AI/ML. My work blends technical rigor with creativity, using cutting-edge techniques to solve real-world problems.
+
+Feel free to explore my portfolio and see how I leverage data to create meaningful change. Stay tuned—there’s more to come!
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
