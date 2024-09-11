@@ -47,17 +47,17 @@ Skills
 
 Projects
 ======
-* **Book Recommender | Python, FAISS, Flask, Pandas, BeautifulSoup**  
+* **Book Recommender** | Python, FAISS, Flask, Pandas, BeautifulSoup
   * *Spring 2024*
   * Engineered a book recommender system by scraping Goodreads data and transforming book descriptions into embeddings using Hugging Face’s sentence-transformers.
   * Built and indexed embeddings with the FAISS library for efficient Approximate Nearest Neighbor (ANN) search, significantly speeding up the retrieval of similar books.
   * Created a web interface for the recommender system, enabling real-time, personalized book suggestions.
 
-* **Honors Thesis | Python, Scikit-Learn, NumPy, Pandas**  
+* **Honors Thesis** | Python, Scikit-Learn, NumPy, Pandas 
   * *Fall 2022*
   * Conducted independent research to predict wildfire sizes in the U.S. using regression and classification models, achieving a 31% accuracy in predicting fires within the correct class.
 
-* **AutoCat – Class Project | JavaScript, PostgreSQL, Vue.js**  
+* **AutoCat – Class Project** | JavaScript, PostgreSQL, Vue.js
   * *Fall 2021*
   * Developed AutoCat, an interactive car catalog website, implementing the project’s database structure and facilitating user-friendly car purchasing.
 
@@ -73,6 +73,3 @@ Publications / Achievements
 * **Hacks for Humanity Hackathon**  
   * 1st place Winner by Project Humanities, Oct 2019
 
-Service and Leadership
-======
-* Currently signed in to 43 different Slack teams
